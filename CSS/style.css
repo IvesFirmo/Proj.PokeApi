@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Merriweather:wght@400;700&family=Montserrat:wght@900&family=Noto+Sans:wght@100&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --font-family:'Merriweather', serif;
+    --font-size: 16px;
+    --gray-clar:#efefef;
+    --gray: #25252b;
+    --white:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+a{
+    color: inherit;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--gray-clar);
+}
+
+.container{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: auto;
+}
+
+
+
+
+/*------------------------ header--------------------------*/
+.header{
+    background-color:var(--gray);
+    text-align: center;
+    height: 8rem;
+}
+
+.poke__logo{
+    width: 300px;
+
+}
+/*------------------------PokeBall--------------------------*/
+.pokeball{
+    width: 250px;
+
+}
+.poke__ball{
+    width:100%;
+    cursor: pointer;
+    filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% /0.5));
+
+}
+
+.poke__ball:active{
+    animation: shake 0.1s;
+    animation-iteration-count: 200;
+}
+
+@Keyframes shake{
+    0% {margin-left: 0;}
+    25% {margin-left: 10px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -10px;}
+    100% {margin-left: 0;}
+}
+/*------------------------Pokestop--------------------------*/
+.pokestop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 8rem - 52px);
+    padding: 2rem 0;
+}
+
+
+
+/*------------------------Pokemons--------------------------*/
+
+.pokemon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: linear-gradient(45deg, #ffeb3b, #ff9800);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+    filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% /0.5));
+
+}
+
+.poke__insideImage{
+    width: 250px;
+    height: 250px;
+    background-color: var(--gray-clar);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.poke__image{
+    width: 100%;
+    filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% /0.5));
+
+}
+
+.poke__name{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.poke__skills{
+    text-transform: capitalize;
+    margin-left: 18px;
+}
+
+
+/*------------------------footer--------------------------*/
+.footer{
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--gray);
+    color:var(--white) ;
+    height: 52px;
+    text-transform: uppercase;
+}
